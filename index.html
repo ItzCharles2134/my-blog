@@ -6,59 +6,60 @@
     <title>My Personal Blog</title>
     <style>
         body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #eef2f7;
-    color: #2d3748;
-    line-height: 1.8;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="none" stroke="rgba(118, 75, 162, 0.2)" stroke-width="2" d="M10 10 Q 20 40, 50 20 T 90 50 Q 70 80, 50 70 T 10 90"></path></svg>');
-    background-repeat: repeat;
-    background-size: 150px 150px;
-}
-body.dark-mode {
-    background-color: #2d3748;
-    color: #f7fafc;
-}
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f7;
+            color: #2d3748;
+            line-height: 1.8;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="none" stroke="rgba(118, 75, 162, 0.2)" stroke-width="2" d="M10 10 Q 20 40, 50 20 T 90 50 Q 70 80, 50 70 T 10 90"></path></svg>');
+            background-repeat: repeat;
+            background-size: 150px 150px;
+        }
+        body.dark-mode {
+            background-color: #2d3748;
+            color: #f7fafc;
+        }
 
-body.dark-mode nav {
-    background: #1a202c;
-}
+        body.dark-mode nav {
+            background: #1a202c;
+        }
 
-body.dark-mode a {
-    color: #63b3ed;
-}
+        body.dark-mode a {
+            color: #63b3ed;
+        }
 
-body.dark-mode .section {
-    background: #1a202c;
-    color: #f7fafc;
-}
-.dark-mode .profile-section {
-    background-color: #2d3748;
-    color: #f7fafc;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
-}
-header {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-    border-bottom: 5px solid #764ba2;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        body.dark-mode .section {
+            background: #1a202c;
+            color: #f7fafc;
+        }
+        .dark-mode .profile-section {
+            background-color: #2d3748;
+            color: #f7fafc;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+        }
+        header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 5px solid #764ba2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-header h1 {
-    font-size: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0 0 10px 0;
-}
+        header h1 {
+            font-size: 2.5rem;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0 0 10px 0;
+        }
 
-header p {
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    font-weight: 300;
-}
+        header p {
+            font-size: 1.2rem;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            font-weight: 300;
+        }
+
         nav {
             background: #2d3748;
             color: white;
@@ -89,15 +90,15 @@ header p {
         }
 
         .profile-section {
-        flex: 1;
-        background: white;
-        border-radius: 15px;
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        text-align: center;
-        align-self: flex-start;
-        max-width: 300px;
-    }
+            flex: 1;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            align-self: flex-start;
+            max-width: 300px;
+        }
 
         .profile-section img {
             width: 150px;
@@ -191,6 +192,68 @@ header p {
             width: 1em;
             margin-right: 10px;
         }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px 0;
+            }
+
+            .main-container {
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 15px;
+            }
+
+            .profile-section {
+                max-width: 100%;
+                padding: 15px;
+                margin: 0 auto;
+            }
+
+            .content-section {
+                flex: 1;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            footer {
+                padding: 15px 0;
+            }
+        }
+
+        /* Small screens (phones) */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav {
+                font-size: 0.9rem;
+            }
+
+            .profile-section {
+                max-width: 100%;
+            }
+
+            .content-section {
+                flex: 1;
+                padding: 0 15px;
+            }
+        }
+
     </style>
 </head>
 <body>
