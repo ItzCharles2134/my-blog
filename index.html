@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f7;
+    color: #2d3748;
+    line-height: 1.8;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="none" stroke="rgba(118, 75, 162, 0.2)" stroke-width="2" d="M10 10 Q 20 40, 50 20 T 90 50 Q 70 80, 50 70 T 10 90"></path></svg>');
+    background-repeat: repeat;
+    background-size: 150px 150px;
+}
+body.dark-mode {
+    background-color: #2d3748;
+    color: #f7fafc;
+}
+
+body.dark-mode nav {
+    background: #1a202c;
+}
+
+body.dark-mode a {
+    color: #63b3ed;
+}
+
+body.dark-mode .section {
+    background: #1a202c;
+    color: #f7fafc;
+}
+.dark-mode .profile-section {
+    background-color: #2d3748;
+    color: #f7fafc;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+}
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 5px solid #764ba2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 0 10px 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-weight: 300;
+}
+        nav {
+            background: #2d3748;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #f7fafc;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #63b3ed;
+        }
+
+        .main-container {
+            display: flex;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .profile-section {
+        flex: 1;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        align-self: flex-start;
+        max-width: 300px;
+    }
+
+        .profile-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-section h3 {
+            margin: 10px 0;
+            color: #764ba2;
+        }
+
+        .profile-section .social-icons a {
+            display: inline-block;
+            margin: 10px 5px;
+            color: #764ba2;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .profile-section .social-icons a:hover {
+            color: #63b3ed;
+        }
+
+        .content-section {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
+        }
+
+        .section h2 {
+            color: #764ba2;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            border-top: 5px solid #764ba2;
+        }
+
+        a {
+            color: #764ba2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li::before {
+            content: '\2022';
+            color: #667eea;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Blog</h1>
+        <p>Your one-stop space to know about me and my journey!</p>
+        <button id="theme-toggle" style="background: #667eea; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Toggle Theme</button>
+    </header>    
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="main-container">
+        <div class="profile-section">
+            <img src="profile.jpg" alt="Profile Picture">
+            <h3>Charles Reo Brent O. Moreno</h3>
+            <p>Studied at:</p>
+            <p>Katipunan Elementay School</p>
+            <p>Buruanga Vocational School</p>
+            <p>4th Year Student at Garcia College of Technology</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/brent.moreno.77" target="_blank">Facebook</a>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <section id="about" class="section">
+                <h2>About Me</h2>
+                <p>Hello! My name is Charles Reo Brent O. Moreno, and I am a 4th year student at Garcia College of Technology. I have a passion for discovering new things, and I enjoy gaming and music. Feel free to explore my blog to know more about me!</p>
+            </section>
+
+            <section id="skills" class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Web Development: HTML, CSS, JavaScript</li>
+                    <li>Programming Languages: PHP</li>
+                    <li>Database Management: MySQL</li>
+                    <li>Other Skills: Crafty/Handy Man</li>
+                </ul>
+            </section>
+
+            <section id="projects" class="section">
+                <h2>Projects</h2>
+                <ul>
+                    <li><strong>NutriMeal:</strong> A student meal planning system designed to provide users with nutritious and budget-friendly meal options. It includes a user-friendly dashboard and offers features like meal selection based on preferences, pricing, and nutritional goals.</li>
+                </ul>
+            </section>
+
+            <section id="contact" class="section">
+                <h2>Contact</h2>
+                <ul>
+                    <li>Email: <a href="mailto:mryema34@gmail.com">mryema34@gmail.com</a></li>
+                    <li>Phone: <a href="tel:09954676327">09954676327</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Charles Reo Brent O. Moreno. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').slice(1);
+            document.getElementById(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
+</html>
